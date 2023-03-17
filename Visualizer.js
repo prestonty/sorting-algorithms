@@ -1,7 +1,4 @@
-// in the future, put this in a separate file or something, main method material
 
-// fun fact, no such think as reference type in javascript, only runtime object types
-// use const for objects as their address is constant
 const size = 20;
 var items = new Array(size);
 const sorter = new Sorter(size);
