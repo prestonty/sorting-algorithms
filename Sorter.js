@@ -47,7 +47,6 @@ class Sorter {
 
     // no need to write function as these are methods. Functions are static methods I think, methods are for objects
     selectionSort(items) {
-        // recursion, nope it is ass as i have a big data structure and will eat my memory and resources
         let homeIndex = 0;
         let smallIndex = 0;
         let current = items[homeIndex];
@@ -55,7 +54,6 @@ class Sorter {
             let smallest = items[homeIndex];
             for(let i = homeIndex; i < items.length; i++) {
                 current = items[i];
-                // console.log("GAY " + current);
                 if(current <= smallest) {
                     smallest = current;
                     smallIndex = i;
@@ -99,8 +97,6 @@ class Sorter {
             for(let i = items.length/2+1; i < items.length; i++) {
                 secondHalf[i] = items[i];
             }
-            console.log("NIGG"+firstHalf.length);
-            console.log("END"+secondHalf.length);
             this.merge(this.mergeSort(firstHalf), this.mergeSort(secondHalf));
         }
         return items;
@@ -153,13 +149,6 @@ class Sorter {
      * since we know at index 0, height should be 10, and at index 5 height should be 60, 
      * no i want to compare relative to one another
      * 
-     * to be 100% i want make my own algorithm and fuck with ppl
-     * 
-     future plans, sort the pillars into binomial distribution (or as close as u can get)
-     unrealistic as it lokos like -Math.abs(x) (pyramid shape)
-     * 
-     * we ship this shit off to outlier pile
-     * 
      */
 }
 
@@ -203,7 +192,6 @@ sorter.print(shuffled);
 
 
 
-// why do i have to do this each time
 var items = new Array(size);
 sorter.populate(items);
 
